@@ -2,7 +2,7 @@
  * @Description:
  * @Autor: zengbotao@myhexin.com
  * @Date: 2024-07-28 09:48:04
- * @LastEditTime: 2024-07-28 16:36:42
+ * @LastEditTime: 2024-07-28 21:47:38
  */
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
@@ -11,7 +11,7 @@ import { TransformInterceptor } from './common/interceptor/transform/transform.i
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  app.setGlobalPrefix('api');
+  // app.setGlobalPrefix('api');
   app.useGlobalFilters(new HttpExceptionFilter());
   app.useGlobalInterceptors(new TransformInterceptor());
   // 设置swagger文档
