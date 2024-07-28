@@ -16,6 +16,14 @@
     "noImplicitAny": false,
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": false,
-    "noFallthroughCasesInSwitch": false
+    "noFallthroughCasesInSwitch": false,
+    "paths": {
+      "@app/modules/email": [
+        "libs/modules/email/src"
+      ],
+      "@app/modules/email/*": [
+        "libs/modules/email/src/*"
+      ]
+    }
   }
 }
